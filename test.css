@@ -5,13 +5,12 @@
 header {
     position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;
     background-color: rgb(74, 190, 113);
     height: 80px;
     width: 100%;
-    max-width: 3000px;
 }
 h1 {               /*杏霖位置*/
     position:absolute;
@@ -70,4 +69,28 @@ nav ul li ul li a {
 }
 nav ul li ul li a:hover {
     background-color: #a3d6a9;
+}
+.menu{
+    display:none;
+}
+/* 響應式設計 */
+@media screen and (max-width:768px){
+    header ul li a{
+        display:none;
+    }
+    h1{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .menu{
+        display:block;
+        background-color: transparent;
+        color: white;
+        font-size: 35px;
+        position: absolute;
+        top:15px;
+        left: 20px;
+        border: none;
+        cursor: pointer;
+    }
 }
