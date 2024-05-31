@@ -61,11 +61,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>杏霖 Skin Care</title>
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="test2.css">
 </head>
 <body>
     <header>
-        <button class="menu">&#9776;</button>
+        <button class="menu"onclick="toggleMenu()">&#9776;</button>
         <h1>杏霖 Skin Care</h1>
         <nav>
             <ul>
@@ -93,5 +93,17 @@
             </ul>
         </nav>
     </header>
+    <script>
+        function toggleMenu() {
+            const menuButton = document.querySelector('.menu');
+            const navLinks = document.querySelector('nav ul');
+            menuButton.classList.toggle('active');
+            if (menuButton.classList.contains('active')) {
+                navLinks.style.display = 'flex';
+            } else {
+                navLinks.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
